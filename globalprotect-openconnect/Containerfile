@@ -1,0 +1,12 @@
+FROM baseimage
+
+RUN dnf install -y dnf5-plugins \
+	&& \
+	dnf copr enable -y yuezk/globalprotect-openconnect \
+	&& \
+	dnf install -y \
+	globalprotect-openconnect \
+	&& \
+	dnf clean all
+
+

@@ -1,0 +1,15 @@
+name := "globalprotect-openconnect"
+packages := "
+globalprotect-openconnect
+"
+base_images := "
+quay.io/fedora-ostree-desktops/kinoite:41
+"
+copr_repos := "yuezk/globalprotect-openconnect"
+disable_repos := "'*'"
+enable_repos := "copr:copr.fedorainfracloud.org:yuezk:globalprotect-openconnect"
+
+
+import '../sysext.just'
+
+all:default
